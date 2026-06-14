@@ -1,0 +1,5 @@
+import json
+data = { "orders": [ {"id": 1, "items": [{"sku": "A1", "qty": 1}]}, {"id": 2, "items": [{"sku": "B2", "qty": 3}, {"sku": "A1", "qty": 2}]}, {"id": 3, "items": [{"sku": "C3", "qty": 5}]}, {"id": 4, "items": [{"sku": "D4", "qty": 1}, {"sku": "E5", "qty": 4}]}, {"id": 5, "items": [{"sku": "F6", "qty": 2}, {"sku": "A1", "qty": 1}]} ] }
+
+with open("orders.json" , "w") as f:
+    json.dump(data, f, indent=2)
