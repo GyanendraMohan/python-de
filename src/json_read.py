@@ -3,5 +3,13 @@ import json
 with open("orders.json" , "r") as f:
     data = json.load(f)
     
+    
+rows = []
 for order in data["orders"]:
-    print(order)
+    for item in order["items"]:
+        rows.append({
+            "order_id":order["id"],
+            "sku":item["sku"],
+            "qty":item["qty"]
+        })
+print(rows)
