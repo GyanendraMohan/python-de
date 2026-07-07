@@ -23,5 +23,11 @@ country_summary = (
     )
 )
 
-print("country summary")
-print(country_summary)
+#print("country summary")
+#print(country_summary)
+
+# window like summation
+
+df["running_total"] = df["amount"].cumsum() # cumulative summation of amount column
+print("after running total")
+print(df)
